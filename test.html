@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+  <div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul class="images">
+        <li>
+        	<h4><span class="bold">Зиг заг 1:</span> серия домов <span class="blue">П3</span> | 1500 х 4900 мм</h4>
+			<section class="constructions">
+				<div class="constructions-left">
+					<div class="cold">
+						<p class="top">Холодное остекление</p>
+						<p>Раздвижной алюминиевый профиль </p>
+						<span>28 700 руб.</span>
+					</div>
+					<div class="heat">
+						<p class="top">Теплое остекление</p>
+						<p>Пластиковый профиль ПВХ REHAU</p>
+						<span>31 700 руб.</span>
+					</div>
+					<a href="#" class="btn">оставить заявку на расчет</a>
+				</div>
+				<div class="constructions-right">
+					<img src="img/%D1%84%D0%BE%D1%82%D0%BE%20%D1%81%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8.png" alt="">
+				</div>
+			</section>
+        </li>
+        <li>
+        	<h4><span class="bold">Зиг заг 1:</span> серия домов <span class="blue">П3</span> | 1500 х 4900 мм</h4>
+			<section class="constructions">
+				<div class="constructions-left">
+					<div class="cold">
+						<p class="top">Холодное остекление</p>
+						<p>Раздвижной алюминиевый профиль </p>
+						<span>28 700 руб.</span>
+					</div>
+					<div class="heat">
+						<p class="top">Теплое остекление</p>
+						<p>Пластиковый профиль ПВХ REHAU</p>
+						<span>31 700 руб.</span>
+					</div>
+					<a href="#" class="btn">оставить заявку на расчет</a>
+				</div>
+				<div class="constructions-right">
+					<img src="img/%D1%84%D0%BE%D1%82%D0%BE%20%D1%81%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8.png" alt="">
+				</div>
+			</section>
+        </li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
+<style>
+body {
+  padding: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 93%;
+  padding: 10px 40px;
+  border: 1px solid #CCC;
+  border-radius: 15px;
+  background: #eee;
+}
+
+.carousel img {
+  width: 390px;
+  height: 390px;
+  /* по умолчанию inline, в ряде браузеров это даст лишнее пространство вокруг элементов */
+
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+	margin-top: -12px;
+  padding: 0;
+  background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.prev {
+  left: 7px;
+}
+
+.next {
+  right: 7px;
+}
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery ul {
+  height: 390px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* remove white-space between inline-block'ed li */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+
+  font-size: 0;
+}
+
+.gallery li {
+  display: inline-block;
+}
+</style>
+  <script>
+	  /* этот код помечает картинки, для удобства разработки */
+    var lis = document.getElementsByTagName('li');
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.position = 'relative';
+      var span = document.createElement('span');
+      // обычно лучше использовать CSS-классы,
+      // но этот код - для удобства разработки, так что не будем трогать стили
+      span.style.cssText = 'position:absolute;left:0;top:0';
+      span.innerHTML = i + 1;
+      lis[i].appendChild(span);
+    }
+
+    /* конфигурация */
+    var width = 390; // ширина изображения
+    var count = 2; // количество изображений
+
+    var carousel = document.getElementById('carousel');
+    var list = carousel.querySelector('ul');
+    var listElems = carousel.querySelectorAll('li');
+
+    var position = 0; // текущий сдвиг влево
+
+    carousel.querySelector('.prev').onclick = function() {
+      // сдвиг влево
+      // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
+      position = Math.min(position + width * count, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+      // сдвиг вправо
+      // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+      position = Math.max(position - width * count, -width * (listElems.length - count));
+      list.style.marginLeft = position + 'px';
+    };
+  </script>
+</body>
+</html>
