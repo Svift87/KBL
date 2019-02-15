@@ -900,6 +900,22 @@ h2 {
   background-color: #fff;
   color: #0065FF;
 }
+.slider-bottom .carousel-item {
+  width: 100%;
+}
+.slider-bottom .img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-bottom .list-img {
+  width: 32%;
+  height: 6.5rem;
+}
+.slider-bottom .list-img img {
+  width: 100%;
+  height: 100%;
+}
 .cold .top::after {
   background-image: url(../img/%D1%85%D0%BE%D0%BB%D0%BE%D0%B4.svg);
 }
