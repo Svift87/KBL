@@ -216,9 +216,6 @@ a:hover {
   color: #fff;
   background-color: #0065FF;
 }
-.nav-top {
-  background-color: #EEEEEE;
-}
 .nav-top .nav-list {
   font-size: 1.5rem;
   position: relative;
@@ -240,19 +237,24 @@ a:hover {
   content: none;
 }
 .nav-top .nav-list a:hover {
+  color: #000;
+}
+.nav-top .nav-list a {
   color: #0065FF;
 }
 .nav {
-  border-top: 1px solid #E5E5E5;
-  border-bottom: 1px solid #E5E5E5;
   margin-bottom: 3rem;
+  background-color: #0065FF;
 }
 .nav .nav-list {
   font-size: 1.5rem;
   position: relative;
 }
 .nav a:hover {
-  color: #0065FF;
+  color: #000;
+}
+.nav a {
+  color: #fff;
 }
 .nav-item {
   margin: 0;
