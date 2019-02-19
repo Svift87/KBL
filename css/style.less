@@ -823,10 +823,19 @@ h2 {
 		width: 18%;
 	}
 }
-.carousel {
+.carousel-1 {
 	margin-bottom: 5.2rem;
+	position: relative;
+	width: 98%;
+	padding: 1%;
+	border: 1px solid #CCC;
+	border-radius: 15px;
+	img {
+		display: block;
+	}
 	h4 {
 		font-size: 1.8rem;
+		margin-bottom: 3.2rem;
 		.bold {
 			font-weight: bold;
 			text-transform: uppercase;
@@ -834,6 +843,92 @@ h2 {
 		.blue {
 			color: #0065FF;
 		}
+	}
+}
+.arrow {
+	position: absolute;
+	bottom: -50px;
+	padding: 0;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #DEE7EC;
+	font-size: 14px;
+	line-height: 24px;
+	color: #444;
+	display: block;
+	width: 40px;
+	height: 40px;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background: #DEE7EC;
+  		cursor: pointer;
+	}
+} 
+.prev {
+  left: 44%;
+}
+
+.next {
+  left: 54%;
+}
+.gallery {
+	width: 714px;
+	overflow: hidden;
+	margin: 0 auto;
+	ul {
+		height: 306px;
+		width: 9999px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transition: margin-left 250ms;
+		font-size: 0;
+	}
+	li {
+		display: inline-block;
+	}
+}
+.carousel-2 {
+	margin-bottom: 5.2rem;
+	position: relative;
+	width: 98%;
+	padding: 1%;
+	img {
+		display: block;
+	}
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 3.2rem;
+		.bold {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.blue {
+			color: #0065FF;
+		}
+	}
+}
+.gallery-2 {
+	width: 714px;
+	overflow: hidden;
+	margin: 0 auto;
+	ul {
+		width: 9999px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transition: margin-left 250ms;
+		font-size: 0;
+	}
+	li {
+		display: inline-block;
+		width: 185px;
+	}
+	img {
+		width: 85%;
+		height: 100%;
 	}
 }
 
@@ -849,9 +944,10 @@ h2 {
 	}
 }
 .carusel-bottom {
+	margin-bottom: 3.2rem;
 	.carousel-item {
 		width: 100%;
-		border-radius: 8px;
+		border-radius: 8px;		
 		h4 {
 			margin-top: 3.2rem;
 			margin-left: 4.9%;
@@ -871,7 +967,6 @@ h2 {
 }
 .constructions-left {
 	width: 39.65%;
-	margin-left: 4.9%;
 	margin-right: 1.6rem;
 	.top {
 		padding-left: 3rem;
@@ -918,24 +1013,6 @@ h2 {
 		&:hover {
 			background-color: #fff;
 			color: #0065FF;
-		}
-	}
-}
-.slider-bottom {
-	.carousel-item {
-		width: 100%;
-	}
-	.img-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.list-img {
-		width: 32%;
-		height: 6.5rem;
-		img {
-			width: 100%;
-			height: 100%;
 		}
 	}
 }
@@ -1049,6 +1126,7 @@ h2 {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		flex-direction: column;		
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
@@ -1083,11 +1161,12 @@ h2 {
 }
 .card {
 	width: 98%;
+	position: relative;
 	.card-body {
 		padding: 0;
 	}
 	.collapse {
-		max-height: 53rem;
+		max-height: 0rem;
 		overflow-y: scroll;
 		&::-webkit-scrollbar {
 			width: 10px;
@@ -1104,9 +1183,29 @@ h2 {
 		}
 	}
 }
+.accordion-radio {
+	display: none;
+}
+#radio-1:checked ~ .card-1 .card-header .btn,
+#radio-2:checked ~ .card-2 .card-header .btn,
+#radio-3:checked ~ .card-3 .card-header .btn,
+#radio-4:checked ~ .card-4 .card-header .btn,
+#radio-5:checked ~ .card-5 .card-header .btn {
+	background-color: #0E75EE;
+	color: #fff;
+}
+#radio-1:checked ~ .card-1 .collapse,
+#radio-2:checked ~ .card-2 .collapse,
+#radio-3:checked ~ .card-3 .collapse,
+#radio-4:checked ~ .card-4 .collapse,
+#radio-5:checked ~ .card-5 .collapse {
+	max-height: 47rem;
+}
 .card-header {
 	padding: 0;
 	.btn {
+		display: block;
+		box-sizing: border-box;
 		width: 100%;
 		text-decoration: none;
 		color: #000;
@@ -1115,14 +1214,13 @@ h2 {
 		padding-top: 1.6rem;
 		padding-bottom: 1.6rem;
 		padding-left: 3.2rem;
-		background-color: #0065FF;
-		color: #fff;
-	}
-	.collapsed {
 		background-color: #fff;
 		color: #000;
+		border-width: 2px;
+		border-style: outset;
+		border-color: buttonface;
+		border-image: initial;
 	}
-
 }
 .price-list {
 	display: -webkit-box;
@@ -1177,7 +1275,6 @@ h2 {
 .carusel-bottom .services {
 	margin-bottom: 0;
 }
-
 .feedback {
 	background-color: #EEEEEE;
 	h3 {
