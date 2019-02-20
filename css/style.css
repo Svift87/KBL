@@ -803,7 +803,7 @@ h2 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 2.3rem;
+  margin-bottom: 5.3rem;
 }
 .examples-img img {
   width: 18%;
@@ -923,7 +923,7 @@ h2 {
   margin-left: 4.9%;
 }
 .carusel-bottom {
-  margin-bottom: 3.2rem;
+  margin-bottom: 6rem;
 }
 .carusel-bottom .carousel-item {
   width: 100%;
@@ -1080,16 +1080,10 @@ h2 {
   align-items: center;
 }
 .services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin-bottom: 6rem;
 }
 .services .card {
-  width: 22%;
+  width: 23%;
   border: 1px solid #DEE7EC;
   border-radius: 8px;
   display: -webkit-box;
@@ -1108,8 +1102,6 @@ h2 {
   padding: 1.6rem;
 }
 .services .card p {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   margin-bottom: 2.5rem;
   text-align: center;
   font-size: 1.5rem;
@@ -1238,6 +1230,23 @@ h2 {
 .carusel-bottom .services {
   margin-bottom: 0;
 }
+.customers {
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+.customers .elastislide-carousel ul {
+  width: 600%;
+  height: 80px;
+}
+.customers img {
+  width: 30%;
+  height: 100%;
+}
+.customers .elastislide-horizontal ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .feedback {
   background-color: #EEEEEE;
 }
@@ -1297,6 +1306,253 @@ h2 {
   background: -o-linear-gradient(bottom, #0065ff, #0065ff);
   background: linear-gradient(0deg, #0065ff, #0065ff);
   color: #FFFFFF;
+}
+/* Demo navigation Style */
+.codrops-demos {
+  text-align: center;
+  display: block;
+  line-height: 30px;
+  padding: 5px 0px;
+  margin-top: 100px;
+}
+.codrops-demos a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 4px;
+  padding: 0px 6px;
+  color: #aaa;
+  line-height: 20px;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px solid #fff;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+  /* IE6-9 */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.codrops-demos a:hover {
+  color: #00ccff;
+  background: #fff;
+}
+.codrops-demos a:active {
+  background: #fff;
+}
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+  background: #f0f0f0;
+  border-color: #d9d9d9;
+  color: #00ccff;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#f6f6f6', GradientType=0);
+  /* IE6-9 */
+}
+/* Demo footer Style */
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  line-height: 24px;
+  top: 0;
+  font-size: 13px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  z-index: 4;
+  border-bottom: 1px solid white;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+  /* IE6-9 */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.footer a {
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-shadow: 0px 1px 1px #000;
+  color: #fff;
+  text-align: right;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #00ccff;
+  text-shadow: 0px 1px 1px #0F6698;
+}
+.footer a span {
+  font-weight: bold;
+}
+.footer span.right_ab {
+  position: absolute;
+  right: 4px;
+}
+.elastislide-horizontal {
+  width: 94%;
+  max-width: 1095px;
+  margin: 0px auto;
+  position: relative;
+  border-radius: 0.11111111px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset -2px 0 3px 2px rgba(255, 255, 255, 0.6), inset 2px 0 3px 2px rgba(255, 255, 255, 0.6), inset -10px 0 10px 1px rgba(155, 155, 155, 0.1), inset 10px 0 10px 1px rgba(155, 155, 155, 0.1);
+}
+.elastislide-wrapper:after {
+  right: 20px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+/* Elastislide Style */
+.elastislide-list {
+  list-style-type: none;
+  display: none;
+}
+.no-js .elastislide-list {
+  display: block;
+}
+.elastislide-carousel ul li {
+  min-width: 20px;
+}
+.elastislide-wrapper {
+  position: relative;
+  background-color: #fff;
+  min-height: 60px;
+}
+.elastislide-wrapper.elastislide-loading {
+  background-image: url(../images/style/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.elastislide-vertical {
+  padding: 40px 10px;
+}
+.elastislide-carousel {
+  overflow: hidden;
+  position: relative;
+}
+.elastislide-carousel ul {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  width: 200%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.elastislide-horizontal ul {
+  white-space: nowrap;
+  max-height: none !important;
+}
+.services .elastislide-horizontal ul {
+  white-space: normal;
+}
+.elastislide-carousel ul li {
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+}
+.elastislide-horizontal ul li {
+  height: 100%;
+  display: inline-block;
+  max-width: none !important;
+  max-height: none !important;
+}
+.examples-img .elastislide-horizontal ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.services .elastislide-horizontal ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.elastislide-vertical ul li {
+  display: block;
+}
+.elastislide-carousel ul li a {
+  display: inline-block;
+  width: 100%;
+}
+.elastislide-carousel ul li a img {
+  display: block;
+  max-width: 100%;
+}
+/* Navigation Arrows */
+.elastislide-wrapper nav span {
+  position: absolute;
+  bottom: -50px;
+  padding: 0;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #DEE7EC;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.elastislide-wrapper nav span:focus {
+  outline: none;
+}
+.elastislide-wrapper nav span:hover {
+  background: #DEE7EC;
+  cursor: pointer;
+}
+.elastislide-wrapper nav span:hover {
+  opacity: 1;
+}
+.elastislide-horizontal nav span {
+  bottom: -50px;
+  left: 45%;
+  margin-left: -11px;
+}
+.elastislide-vertical nav span {
+  top: 10px;
+  left: 50%;
+  margin-left: -11px;
+  background-position: -17px 5px;
+}
+.elastislide-horizontal nav span.elastislide-next {
+  right: 45%;
+  margin-right: -11px;
+  left: auto;
+  background-position: 4px -17px;
+}
+.elastislide-vertical nav span.elastislide-next {
+  bottom: 10px;
+  top: auto;
+  background-position: -17px -18px;
 }
 @media (max-width: 960px) {
   .container .header-top-item > li:first-child {
@@ -1480,7 +1736,7 @@ h2 {
     line-height: 1.4rem;
   }
   .services {
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
   .card-header .btn {
     font-size: 1.4rem;
