@@ -1239,24 +1239,18 @@ h2 {
   height: 80px;
 }
 .customers .image-container {
-  width: 33%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .customers img {
-  width: 100%;
+  width: 96%;
   height: 100%;
 }
 .customers .circle {
   width: 80px;
   height: 80px;
-}
-.customers .elastislide-horizontal ul li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .feedback {
   background-color: #EEEEEE;
