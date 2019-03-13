@@ -541,9 +541,9 @@ h2 {
 		display: flex;
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
-		justify-content: space-between;
-		label {
-			background-color: #0065FF;
+		justify-content: space-between;		
+		div {
+			background-color: #fff;
 			border-radius: 8px 8px 0px 0px;
 			border: 1px solid #0065FF;
 			width: 30%;
@@ -551,7 +551,7 @@ h2 {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
-			color: #fff;
+			color: #0065FF;
 			font-size: 1.8rem;
 			-webkit-box-pack: center;
 			-ms-flex-pack: center;
@@ -569,25 +569,21 @@ h2 {
 				margin-top: 1rem;
 			}
 			svg path {
-				fill: #fff;
+				fill: #0065FF;
+			}
+			&:not(.active) {
+				background-color: #0065FF;
+				color: #fff;
+				svg path {
+					fill: #fff;
+				}
 			}
 		}
 	}
 }
-#glazing-btn-1:checked ~ .container-lable .glazing-cold,
-#glazing-btn-2:checked ~ .container-lable .glazing-heat,
-#glazing-btn-3:checked ~ .container-lable .glazing-frameless {
-	background-color: #fff;
-	color: #0065FF;
-	border: 1px solid #DEE7EC;
-	border-bottom: none;
-	svg path {
-		fill: #0065FF;
-	}
-}
 .glazing-section {
 	margin-top: 3rem;
-	display: none;
+	display: flex;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
@@ -671,13 +667,6 @@ h2 {
 	}
 }
 
-#glazing-btn-1:checked ~ .cold,
-#glazing-btn-2:checked ~ .heat,
-#glazing-btn-3:checked ~ .frameless {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
 .btn-container {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1628,10 +1617,10 @@ h2 {
 	svg {
 		width: 1.6rem;
 	}
-	.glazing .container-lable label {
+	.glazing .container-lable div {
 		height: 5.7rem;
 	}
-	.glazing .container-lable label p {
+	.glazing .container-lable div p {
 		margin: 0;
 	}
 	.glazing-left h3 {
